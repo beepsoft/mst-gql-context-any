@@ -1,0 +1,31 @@
+directive @cacheControl(maxAge: Int, scope: CacheControlScope) on FIELD_DEFINITION | OBJECT | INTERFACE
+
+enum CacheControlScope {
+    PUBLIC
+    PRIVATE
+}
+
+input CreateTodoInput {
+    id: ID!
+    text: String!
+    complete: Boolean
+}
+
+type Mutation {
+    toggleTodo(id: ID!): Todo
+    createTodo(todo: CreateTodoInput!): Todo
+}
+
+type Query {
+    todos: [Todo]
+}
+
+type Todo {
+    id: ID
+    text: String
+    complete: Boolean
+}
+
+# The `Upload` scalar type represents a file upload.
+scalar Upload
+
