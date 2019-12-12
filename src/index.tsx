@@ -3,6 +3,6 @@ import {useQuery} from "./models";
 function testUseQuery()
 {
     useQuery(store => {
-        return store.su
+        return store.
     });
 }
