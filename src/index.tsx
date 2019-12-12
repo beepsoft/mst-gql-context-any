@@ -1,9 +1,8 @@
 import {useQuery} from "./models";
 
-
 function testUseQuery()
 {
-  useQuery(store => {
-    return store.query("aaa")
-  })
+    useQuery(store => {
+        return store.su
+    });
 }
